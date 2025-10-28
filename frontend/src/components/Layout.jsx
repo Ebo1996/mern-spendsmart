@@ -12,9 +12,9 @@ export default function Layout({ children }) {
   };
 
   const navItems = [
-    { path: '/dashboard', icon: PieChart, label: 'Dashboard' },
-    { path: '/transactions', icon: Receipt, label: 'Transactions' },
-    { path: '/add-transaction', icon: Home, label: 'Add Transaction' },
+    { path: "/dashboard", icon: PieChart, label: "Dashboard" },
+    { path: "/transactions", icon: Receipt, label: "Transactions" },
+    { path: "/add-transaction", icon: Home, label: "Add Transaction" },
   ];
 
   const isActive = (path) => location.pathname === path;
@@ -27,7 +27,9 @@ export default function Layout({ children }) {
             <div className="flex items-center">
               <Link to="/dashboard" className="flex items-center space-x-2">
                 <Receipt className="h-8 w-8 text-indigo-600" />
-                <span className="text-xl font-bold text-gray-900">SpendSmart</span>
+                <span className="text-xl font-bold text-gray-900">
+                  SpendSmart
+                </span>
               </Link>
             </div>
 
@@ -40,8 +42,8 @@ export default function Layout({ children }) {
                     to={item.path}
                     className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium ${
                       isActive(item.path)
-                        ? 'bg-indigo-100 text-indigo-600'
-                        : 'text-gray-700 hover:bg-gray-100'
+                        ? "bg-indigo-100 text-indigo-600"
+                        : "text-gray-700 hover:bg-gray-100"
                     }`}
                   >
                     <Icon className="h-5 w-5" />
@@ -51,7 +53,9 @@ export default function Layout({ children }) {
               })}
 
               <div className="flex items-center space-x-2 text-sm text-gray-700">
-                <span className="hidden sm:inline">{user?.name || user?.email}</span>
+                <span className="hidden sm:inline">
+                  {user?.name || user?.email}
+                </span>
                 <button
                   onClick={handleLogout}
                   className="flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium text-red-600 hover:bg-red-50"
