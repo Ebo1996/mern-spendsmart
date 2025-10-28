@@ -6,6 +6,7 @@ async function getSummary(req, res) {
     const { startDate, endDate } = req.query;
     const matchFilter = { user: new mongoose.Types.ObjectId(req.userId) };
     if (startDate || endDate) {
+
       matchFilter.date = {};
       if (startDate) matchFilter.date.$gte = new Date(startDate);
       if (endDate) matchFilter.date.$lte = new Date(endDate);
