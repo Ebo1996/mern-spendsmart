@@ -21,6 +21,11 @@ async function getSummary(req, res) {
         { $match: { ...matchFilter, type: 'expense' } },
         { $group: { _id: null, total: { $sum: '$amount' } } },
       ]),
+
+
+
+
+
     ]);
 
     const incomeTotal = income[0]?.total || 0;
