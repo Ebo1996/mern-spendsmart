@@ -12,6 +12,9 @@ async function register(req, res) {
     if (existing) {
       return res.status(400).json({ msg: 'Email already used' });
     }
+
+
+
     const hash = await bcrypt.hash(password, 10);
     const user = await User.create({ email, passwordHash: hash, name });
     const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET);
