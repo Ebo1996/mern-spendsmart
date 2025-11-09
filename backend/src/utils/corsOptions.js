@@ -13,8 +13,6 @@ const corsOptions = {
 
 
 
-
-
   },
   credentials: true,
 };
