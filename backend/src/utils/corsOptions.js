@@ -12,7 +12,6 @@ const corsOptions = {
 
 
 
-
   },
   credentials: true,
 };
