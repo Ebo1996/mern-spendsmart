@@ -11,6 +11,7 @@ A full-stack MERN application for tracking income and expenses with advanced ana
 - 📅 **Filtering**: Filter transactions by type, date range, and category
 - 📱 **Responsive Design**: Mobile-friendly UI with Tailwind CSS
 
+
 ## Tech Stack
 ### Backend
 - Node.js
