@@ -20,7 +20,6 @@ A full-stack MERN application for tracking income and expenses with advanced ana
 - bcrypt for password hashing
 - Helmet for security
 - Rate limiting
-
 ### Frontend
 - React with Vite
 - React Router for navigation
